@@ -25,8 +25,8 @@ CORS(app,
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
      allow_headers=["*"])
 # API Keys
-GEMINI_API_KEY =  "AIzaSyDW4BCGnID5zsxrjDX1DNu23-Fn4tkH_Hw"
-ORS_KEY =  "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjYwNTQ2MTMyMWQ3YjQzOWZhYWFmMmQ5ZDhiMzI0ZWZhIiwiaCI6Im11cm11cjY0In0="
+GEMINI_API_KEY =  "GEMINI-API-KEY"
+ORS_KEY =  "ORS_KEY"
 
 # Initialize Gemini AI
 genai.configure(api_key=GEMINI_API_KEY)
@@ -805,4 +805,5 @@ def internal_error(error):
 
 if __name__ == '__main__':
     init_db()
+
     app.run(debug=True, host='0.0.0.0', port=5000)
